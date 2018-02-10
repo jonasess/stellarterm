@@ -382,6 +382,17 @@ directory.addAsset('thefutbolcoin.io', {
   code: 'TFC',
   issuer: 'GDS3XDJAA4VY6MJYASIGSIMPHZ7AQNZ54RKLWT7MWCOU5YKYEVCNLVS3',
 });
+directory.addAnchor({
+  domain: 'charnetoken.top',
+  website: 'http://charnatoken.top/',
+  logo: 'charnetoken.top',
+  color: '#1c4664',
+  displayName: 'CharnaToken',
+});
+directory.addAsset('charnatoken.top', {
+  code: 'CHRC',
+  issuer: 'GBRPTWEZTUKYM6VJXLHXBFI23M2GSY3TCVIQSZKFQLMOJXH7VPDGKBDP',
+});
 
 // Pairs involving "fiat" assets
 // "Fiat" asset should be counterSelling
@@ -451,6 +462,10 @@ directory.addPair({
 directory.addPair({
   baseBuying: ['XLM', 'native'],
   counterSelling: ['BTC', 'golix.io'],
+});
+directory.addPair({
+  baseBuying: ['XLM', 'native'],
+  counterSelling: ['BTC', 'charnatoken.top'],
 });
 
 // Pairs involving XLM
@@ -575,6 +590,10 @@ directory.addPair({
   baseBuying: ['XLQ', 'liquido.i-server.org'],
   counterSelling: ['XLM', 'native'],
 });
+directory.addPair({
+  baseBuying: ['CHRC', 'charnatoken.top'],
+  counterSelling: ['XLM', 'native'],
+});
 
 directory.addDestination('GCEGERI7COJYNNID6CYSKS5DPPLGCCLPTOSCDD2LG5SJIVWM5ISUPERI', {
   name: 'Superlumen Issuer',
@@ -665,6 +684,11 @@ directory.addDestination('GCCD6AJOYZCUAQLX32ZJF2MKFFAUJ53PVCFQI3RHWKL3V47QYE2BNA
 directory.addDestination('GBTCBCWLE6YVTR5Y5RRZC36Z37OH22G773HECWEIZTZJSN4WTG3CSOES', {
   name: 'NaoBTC',
   acceptedAssetsWhitelist: ['BTC-naobtc.com'],
+});
+directory.addDestination('GBRPTWEZTUKYM6VJXLHXBFI23M2GSY3TCVIQSZKFQLMOJXH7VPDGKBDP', {
+  name: 'CharnaToken Issuer',
+  requiredMemoType: 'MEMO_ID',
+  acceptedAssetsWhitelist: ['XLM-native'],
 });
 
 // Assert that each asset has a trading pair
